@@ -21,11 +21,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-<link
+<%-- <link
 	href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"
 	rel="stylesheet">
 <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	 --%>
+
+<link rel="stylesheet" href="background/bootstrap/css/bootstrap.min.css">
+<script src="background/bootstrap/jquery.min.js"></script>
+<script src="background/bootstrap/js/bootstrap.min.js"></script>
   </head>
   
   <body>
