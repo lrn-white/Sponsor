@@ -38,12 +38,29 @@
 	<div class="head">
 		<div class="header"></div>
 		<img class="picture" style="margin-left:10px;" src="img/tubiao.png" />
-		<a class="home" style="margin-left:20px;" href="index.html">首页</a>
-		<a class="home" style="margin-left:21px;" href="foreground/show_activity.jsp">活动展示</a>
-		<a class="home" style="margin-left:22px;" href="zanzhuChoose(w).html">赞助展示</a>
-		<a class="home" style="margin-left:23px;" href="foreground/discuss.jsp">讨论区</a>
-		<a class="home" style="margin-left:24px;" href="">关于我们</a> <a
-			class="home" style="margin-left:650px;" href="login.html">登陆/注册</a>
+		<a class="home" style="margin-left:20px;" href="index.html">首页</a> <a
+			class="home" style="margin-left:21px;"
+			href="foreground/show_activity.jsp">活动展示</a> <a class="home"
+			style="margin-left:22px;" href="zanzhuChoose(w).html">赞助展示</a> <a
+			class="home" style="margin-left:23px;" href="foreground/discuss.jsp">讨论区</a>
+		<a class="home" style="margin-left:24px;" href="">个人信息</a> 
+		<%-- <a class="home" style="margin-left:650px;" href="foreground/login.jsp">
+		<%
+		String stuname = request.getParameter("stuName");
+		if(stuname == null){
+		out.print("登陆/注册");}		
+		else {
+		out.println("您好，"+stuname);
+		}
+		%></a>	 --%>
+			<%
+			String stuname = request.getParameter("stuName");
+			if(stuname == null){%>
+			<a class="home" style="margin-left:650px;" href="foreground/login.jsp">登陆/注册</a>
+			<%} %>
+			<%if(stuname!=null){%>
+			<a class="home" style="margin-left:650px;" href="NewFile.jsp"><%out.println("您好，"+stuname);%></a>
+			<%} %>
 	</div>
 	<!--滚动图片-->
 	<div id="demo01" class="flexslider">

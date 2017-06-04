@@ -24,13 +24,15 @@
 		<a class="home" style="margin-left:21px;" href="show_activity.jsp">活动展示</a>
 		<a class="home" style="margin-left:22px;" href="zanzhuChoose(c).html">赞助展示</a>
 		<a class="home" style="margin-left:23px;" href="discuss.jsp">讨论区</a>
-		<a class="home" style="margin-left:24px;" href="">关于我们</a> <select
-			onchange="MM_jumpMenu('parent',this,0)">
-			<option value="">username</option>
-			<option value="personalInformation（c）.html">公司信息</option>
-			<option value="">联系我们</option>
-			<option value="login.html">退出</option>
-		</select>
+		<a class="home" style="margin-left:24px;" href="">关于我们</a> 
+		<%
+			String stuname = request.getParameter("stuName");
+			if(stuname == null){%>
+			<a class="home" style="margin-left:650px;" href="foreground/login.jsp">登陆/注册</a>
+			<%} %>
+			<%if(stuname!=null){%>
+			<a class="home" style="margin-left:650px;" href="NewFile.jsp"><%out.println("您好，"+stuname);%></a>
+			<%} %>
 	</div>
 	<div class="body1">
 		<h2>活动库</h2>
@@ -65,14 +67,8 @@
 			</tr>
 		</table>
 	</div>
-	<div class="body2">
-		<p>
-		<h2>
-			<a style="text-decoration:none" href="show_activity_detail.jsp">关于创新大赛的活动</a>
-		</h2>
-		</p>
 
-		<s:iterator value="#request.activities">
+		<%-- <s:iterator value="#request.activities">
 			<div class="div" onclick="location.href='#'" style="cursor:pointer">
 				<dl>
 					<dd>
@@ -86,10 +82,83 @@
 					<dd>活动预算：${acBudget }</dd>
 				</dl>
 			</div>
-		</s:iterator>
-
-
+		</s:iterator> --%>
+	
+	<div class="body2">
+		<div class="div1">
+			<dl>
+				<dd>
+				<p><h2><a style="text-decoration:none" href="actionInformation.html">关于创新大赛的活动</a></h2></p>
+				</dd>
+				<dd>活动性质：xxx</dd>
+				<dd>活动预算：xxx</dd>
+			</dl>
+		</div>
+		<div class="div2">
+			<dl>
+					<dd>
+					<p><h2><a style="text-decoration:none" href="">xxxxxxxx</a></h2></p>
+					</dd>
+					<dd>活动性质：xxx</dd>
+					<dd>活动预算：xxx</dd>
+				</dl>
+		</div>
+		<div class="div3">
+				<dl>
+					<dd>
+					<p><h2><a style="text-decoration:none" href="">xxxxxxxx</a></h2></p>
+					</dd>
+					<dd>活动性质：xxx</dd>
+					<dd>活动预算：xxx</dd>
+				</dl>
+		</div>
+		<div class="div4">
+				<dl>
+					<dd>
+					<p><h2><a style="text-decoration:none" href="">xxxxxxx</a></h2></p>
+					</dd>
+					<dd>活动性质：xxx</dd>
+					<dd>活动预算：xxx</dd>
+				</dl>
+		</div>
+		<div class="div5">
+				<dl>
+					<dd>
+					<p><h2><a style="text-decoration:none" href="">xxxxxxx</a></h2></p>
+					</dd>
+					<dd>活动性质：xxx</dd>
+					<dd>活动预算：xxx</dd>
+				</dl>
+		</div>
+		<div class="div6">
+				<dl>
+					<dd>
+					<p><h2><a style="text-decoration:none" href="">xxxxxxxx</a></h2></p>
+					</dd>
+					<dd>活动性质：xxx</dd>
+					<dd>活动预算：xxx</dd>
+				</dl>
+		</div>
+		<div class="div7">
+				<dl>
+					<dd>
+					<p><h2><a style="text-decoration:none" href="">xxxxxxxx</a></h2></p>
+					</dd>
+					<dd>活动性质：xxx</dd>
+					<dd>活动预算：xxx</dd>
+				</dl>
+		</div>
+		<div class="div8">
+				<dl>
+					<dd>
+					<p><h2><a style="text-decoration:none" href="">xxxxxxxx</a></h2></p>
+					</dd>
+					<dd>活动性质：xxx</dd>
+					<dd>活动预算：xxx</dd>
+				</dl>
+		</div>
 	</div>
+	
 	<div class="body3">
 		<h2>
 			<center>推荐优秀活动</center>

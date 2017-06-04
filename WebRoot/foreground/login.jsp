@@ -14,11 +14,12 @@
 	</div>
 	<div class="login">
 		<h3>账户登陆</h3>
-		<form action="stu-login" method="post">
+		<!-- <form action="stu-login" method="post"> -->
+		<form action="../index.jsp" method="post">
 			<input name="stuId" placeholder="请输入学号" type="text"/> 
 			<input name="stuName" placeholder="请输入姓名"	 type="text"/> 
 			<input class='sub' type="submit" value="登录" />
-		<a id="zhuce" style="text-decoration:none" href="register.html">注册</a>
+		<a id="zhuce" style="text-decoration:none" href="register.jsp">注册</a>
 		</form>
 
 	</div>

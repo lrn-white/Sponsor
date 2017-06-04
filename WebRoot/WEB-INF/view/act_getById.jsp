@@ -60,6 +60,7 @@
 	<img class="huodong" src="img/u=530728121,1477121152&fm=23&gp=0.jpg" />
 	<div class="information">
 	<h1><center>活动信息</center></h1>
+	
 	<s:iterator value="#request.activityById">
 	<table cellpadding="20" cellspacing="10" id="table">
 		<tr>
@@ -94,6 +95,7 @@
 		</tr>
 	</table>
 	</s:iterator>
+	
 	</div>
 <div style="margin-top:800px">
 	<tr style="text-align: center">
